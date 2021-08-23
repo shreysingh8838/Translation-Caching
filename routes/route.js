@@ -23,6 +23,14 @@ route.get("/translate", cacheMiddleware, smartCache, async (req, res) => {
     and target_lang="${target_lang}" 
     and text="${text}";`,
     timeout: 40000,
+  }, (err, results) => {
+    if (err) {
+      return res.status(500).send("DB Error occured!");
+    }
+    if (results.length !== 0) {
+      return res.status(200).send({ ...results[0] })
+    }
+    return res.status(500).send("Server Error occured!");
   });
 })
 //exporting this module because required in index.js
