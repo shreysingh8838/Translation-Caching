@@ -90,11 +90,15 @@ Translations for similar languages (Smart Caching)
 
 ## NPM packages used
 
-    - mysql
+    - mysql2
     - dotenv
     - body-parser
     - @google-cloud/translate
     - nodemon
+## Further Improvements
+Instead of taking language code from the user we can just have the name of the source and the target language. A separate table can be created in the database in which we can store the languages with their language codes and then get the language code from the database to pass it to the API.
+
+I have added a code for language detection in shrey_translate_detect_demo.js
 
 ## Author
 
