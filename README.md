@@ -76,7 +76,7 @@ This is a Web Server which can be used by an individual looking to translate tex
 ## Result Evaluation
 -Following is the result for converting "hy from shrey" source_lang = english to target_lang=italian
 
-<img src="./ss2.PNG" style="width: 30%; height:100%;" />
+<img src="./query3.PNG" style="width: 30%; height:100%;" />
 
 -I verified my code for different test cases and checked that it shouldn't contain similar data in the database. If the data is already available for the given input it should return the output from there only and should not hit the API for that. I checked the database for the same with different and similar queries, and also checked for the different sections of the code so that only that part of the code works which is required for the particular query. 
 
@@ -86,7 +86,7 @@ Translation for "hello"
 
 Translations for similar languages (Smart Caching)
 
-<img src="./table2.JPG" style="width: 30%; height:100%;" />
+<img src="./query2.PNG" style="width: 30%; height:100%;" />
 
 ## Further Improvements
 1. Instead of taking language code from the user we can just have the name of the source and the target language. A separate table can be created in the database in which we can store the languages with their language codes and then get the language code from the database to pass it to the API.
